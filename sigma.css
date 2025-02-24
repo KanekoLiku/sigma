@@ -21,15 +21,6 @@
 @import url("https://scp-jp.github.io/files/util/common/media/component/theme/font-bauhaus.css");
 
 /* FONT-FACE */
-@import url("https://scp-jp.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-ExtraLight.css");
-@import url("https://scp-jp.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Light.css");
-@import url("https://scp-jp.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Thin.css");
-@import url("https://scp-jp.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Medium.css");
-@import url("https://scp-jp.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Regular.css");
-@import url("https://scp-jp.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Text.css");
-@import url("https://scp-jp.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-SemiBold.css");
-@import url("https://scp-jp.github.io/sigma/fonts/IBMPlexSansJP/IBMPlexSansJP-Bold.css");
-
 @font-face {
 	font-family: Inter;
 	font-style: normal;
@@ -171,7 +162,7 @@ body {
 	background-color: #fff;
 	font-size: 0.95em;
 	color: #333;
-	font-family: Inter, RedactRect, "IBM Plex Sans JP", sans-serif;
+	font-family: Inter, RedactRect, sans-serif;
 	font-feature-settings: "case", "ss01", "ss04";
 }
 
@@ -314,7 +305,7 @@ sup {
 	max-height: 0;
 	color: #eee;
 	background: transparent;
-	font-family: "Sans Normalcy", Arial, "IBM Plex Sans JP", sans-serif;
+	font-family: "Sans Normalcy", Arial, sans-serif;
 	font-size: 1.5em;
 	text-decoration: none;
 	text-shadow: 3px 3px 5px #000;
