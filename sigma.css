@@ -1428,7 +1428,7 @@ div#u-adult-warning > .error-block {
 
 .content-panel.scp ul li::before {
 	background: #333;
-	content: "";
+	content: '';
 	display: inline-block;
 	height: 5px;
 	margin: 0 10px 0 -15px;
@@ -1473,7 +1473,7 @@ div#u-adult-warning > .error-block {
 #page-content
 	.wikisys--template-dialog
 	> .wikisys--template-dialog-header::before {
-	content: "";
+	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1510,7 +1510,7 @@ div#u-adult-warning > .error-block {
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	content: "\f111";
+	content: '\f111';
 	position: absolute;
 	left: 1.5rem;
 }
@@ -1542,6 +1542,5 @@ div#u-adult-warning > .error-block {
 }
 
 .forum-category-box .title a:empty::after {
-	content: "\3000";
+	content: '\3000';
 }
-
