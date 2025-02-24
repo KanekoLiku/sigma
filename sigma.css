@@ -15,30 +15,13 @@
 
 @charset "utf-8";
 
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 /* Don't remove Bauhaus yet, still onsite dependencies to resolve */
 @import url("https://scp-jp.github.io/files/util/common/media/component/theme/font-bauhaus.css");
 
 /* FONT-FACE */
-@font-face {
-	font-family: Inter;
-	font-style: normal;
-	font-weight: 100 900;
-	font-display: swap;
-	src: url("https://scp-jp.github.io/sigma/fonts/Inter-roman.var.woff2?v=3.19")
-		format("woff2");
-}
-
-@font-face {
-	font-family: Inter;
-	font-style: italic;
-	font-weight: 100 900;
-	font-display: swap;
-	src: url("https://scp-jp.github.io/sigma/fonts/Inter-italic.var.woff2?v=3.19")
-		format("woff2");
-}
-
 @font-face {
 	font-family: "Sans Normalcy";
 	font-style: normal;
@@ -162,8 +145,10 @@ body {
 	background-color: #fff;
 	font-size: 0.95em;
 	color: #333;
-	font-family: Inter, RedactRect, sans-serif;
-	font-feature-settings: "case", "ss01", "ss04";
+	font-family: InterVariable, RedactRect, Inter, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans',
+		'Helvetica Neue', sans-serif;
+	font-feature-settings: 'case', 'ss01', 'ss04';
 }
 
 input,
@@ -177,8 +162,8 @@ textarea {
 }
 
 div#container-wrap {
-	background: url("https://scp-jp.github.io/sigma/images/body_bg.svg") top
-		left repeat-x;
+	background: url("https://scp-jp.github.io/sigma/images/body_bg.svg")
+		top left repeat-x;
 }
 
 sup {
@@ -582,7 +567,8 @@ sup {
 		bottom: 1rem;
 		left: 1rem;
 		z-index: 15;
-		font-family: sans-serif;
+		font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+			'Times New Roman', Helvetica, Roboto, sans-serif;
 		font-size: 30px;
 		font-weight: 700;
 		width: 30px;
@@ -1595,3 +1581,17 @@ li.folded > .colmod-content {
 }
 
 /* vim: set noet: */
+
+/*
+    Fix for Wikidot error with displaying the 'Is username an abusive user' prompt,
+    when selecting the 'The User Is Abusive' option, due to a wikido typo
+    'unflad-user-abusive' is an intentional typo in this code.
+*/
+
+.unflad-user-abusive {
+	color: #844;
+	font-size: 150%;
+	border: 1px solid #000;
+	padding: 3px;
+	margin: 5px;
+}
