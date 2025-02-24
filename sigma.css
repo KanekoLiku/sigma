@@ -19,16 +19,16 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 /* Don't remove Bauhaus yet, still onsite dependencies to resolve */
-@import url("https://scp-jp.github.io/files/util/common/media/component/theme/font-bauhaus.css");
+@import url('https://scp-jp.github.io/files/util/common/media/component/theme/font-bauhaus.css');
 
 /* FONT-FACE */
 @font-face {
-	font-family: "Sans Normalcy";
+	font-family: 'Sans Normalcy';
 	font-style: normal;
 	font-weight: 700;
 	font-display: swap;
-	src: url("https://scp-jp.github.io/sigma/fonts/Sans-Normalcy.woff2")
-		format("woff2");
+	src: url('https://scp-jp.github.io/sigma/fonts/Sans-Normalcy.woff2')
+		format('woff2');
 }
 
 @font-face {
@@ -36,8 +36,8 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url("https://scp-jp.github.io/sigma/fonts/RedactRect.woff2")
-		format("woff2");
+	src: url('https://scp-jp.github.io/sigma/fonts/RedactRect.woff2')
+		format('woff2');
 	unicode-range: U+2588;
 }
 
@@ -162,8 +162,8 @@ textarea {
 }
 
 div#container-wrap {
-	background: url("https://scp-jp.github.io/sigma/images/body_bg.svg")
-		top left repeat-x;
+	background: url('https://scp-jp.github.io/sigma/images/body_bg.svg') top
+		left repeat-x;
 }
 
 sup {
@@ -178,7 +178,7 @@ sup {
 	position: relative;
 	z-index: 10;
 	padding-bottom: 22px; /* FOR MENU */
-	background: url("https://scp-jp.github.io/sigma/images/header-logo.svg")
+	background: url('https://scp-jp.github.io/sigma/images/header-logo.svg')
 		10px 40px no-repeat;
 	background-size: 100px;
 	background-position: 10px 64%;
@@ -218,7 +218,7 @@ sup {
 	display: none;
 }
 
-#search-top-box-form input[type="submit"] {
+#search-top-box-form input[type='submit'] {
 	border: solid 1px #999;
 	border-radius: 5px;
 	padding: 2px 5px;
@@ -231,8 +231,8 @@ sup {
 	cursor: pointer;
 }
 
-#search-top-box-form input[type="submit"]:hover,
-#search-top-box-form input[type="submit"]:focus {
+#search-top-box-form input[type='submit']:hover,
+#search-top-box-form input[type='submit']:focus {
 	border: solid 1px #fff;
 	color: #fff;
 	text-shadow: 0 0 1px rgba(255, 255, 255, 0.25);
@@ -290,7 +290,7 @@ sup {
 	max-height: 0;
 	color: #eee;
 	background: transparent;
-	font-family: "Sans Normalcy", Arial, sans-serif;
+	font-family: 'Sans Normalcy', Arial, sans-serif;
 	font-size: 1.5em;
 	text-decoration: none;
 	text-shadow: 3px 3px 5px #000;
@@ -299,12 +299,12 @@ sup {
 
 /*  ヘッダータイトルのアルファベットのずれを修正 */
 #header h1 a::before {
-	content: "SCP";
+	content: 'SCP';
 	font-size: 1.02em;
 }
 
 #header h1 a::after {
-	content: "財団";
+	content: '財団';
 	vertical-align: middle;
 }
 
@@ -618,7 +618,7 @@ sup {
 }
 
 /* ACTUALLY HIDE HIDDEN TAGS */
-#main-content .page-tags a[href^="/system:page-tags/tag/_"] {
+#main-content .page-tags a[href^='/system:page-tags/tag/_'] {
 	display: none;
 }
 
@@ -638,7 +638,7 @@ sup {
 .yui-navset .yui-nav a,
 .yui-navset .yui-navset-top .yui-nav a {
 	background-color: #d8d8d8;
-	background-image: url("https://d3g0gp89917ko0.cloudfront.net/v--3b8418686296/common--theme/shiny/images/yuitabs.png");
+	background-image: url('https://d3g0gp89917ko0.cloudfront.net/v--3b8418686296/common--theme/shiny/images/yuitabs.png');
 }
 
 .yui-navset .yui-nav .selected a,
@@ -646,7 +646,7 @@ sup {
 .yui-navset .yui-nav .selected a:hover {
 	/* no hover effect for selected */
 	background: #700
-		url("https://d3g0gp89917ko0.cloudfront.net/v--3b8418686296/common--theme/shiny/images/yuitabs.png")
+		url('https://d3g0gp89917ko0.cloudfront.net/v--3b8418686296/common--theme/shiny/images/yuitabs.png')
 		repeat-x left -1400px; /* selected tab background */
 
 	color: #fff;
@@ -655,7 +655,7 @@ sup {
 .yui-navset .yui-nav a:hover,
 .yui-navset .yui-nav a:focus {
 	background: #d88
-		url("https://d3g0gp89917ko0.cloudfront.net/v--3b8418686296/common--theme/shiny/images/yuitabs.png")
+		url('https://d3g0gp89917ko0.cloudfront.net/v--3b8418686296/common--theme/shiny/images/yuitabs.png')
 		repeat-x left -1300px;
 	text-decoration: none;
 }
@@ -769,7 +769,7 @@ div.sexy-box div.image-container img {
 .content-panel .panel-body {
 	padding: 5px 10px;
 	background: #fff9f0
-		url("https://scp-jp.github.io/files/util/common/media/component/theme/panel-bg-gradient-reverse.png")
+		url('https://scp-jp.github.io/files/util/common/media/component/theme/panel-bg-gradient-reverse.png')
 		bottom repeat-x;
 }
 
@@ -1048,7 +1048,7 @@ rt {
 }
 
 .tags::before {
-	content: "";
+	content: '';
 	padding: 0 1px 3px;
 	float: left;
 	position: relative;
@@ -1062,7 +1062,7 @@ rt {
 }
 
 .tags::after {
-	content: "";
+	content: '';
 	position: relative;
 	top: 4.5px;
 	left: -8px;
@@ -1376,69 +1376,18 @@ div#u-adult-warning > .error-block {
 	display: block !important;
 }
 
-/* Colmod */
-.colmod-block > ul,
-.colmod-block > ul > li {
-	display: block;
-	line-height: normal;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
+/*
+    Fix for Wikidot error with displaying the 'Is username an abusive user' prompt,
+    when selecting the 'The User Is Abusive' option, due to a wikido typo
+    'unflad-user-abusive' is an intentional typo in this code.
+*/
 
-.colmod-block > ul > li > ul,
-li.folded > .colmod-link-top a + a,
-li.folded > .colmod-content,
-li.folded > .colmod-link-end a,
-li.unfolded > .colmod-link-top a:first-child {
-	display: none;
-}
-
-.colmod-content {
-	animation: colmod-fade-in 0.2s ease-in-out;
-	animation-timing-function: cubic-bezier(0.365, 0, 0.635, 1);
-}
-
-li.folded > .colmod-content {
-	animation-name: none;
-}
-
-@keyframes colmod-fade-in {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes colmod-fade-in {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes colmod-fade-in {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-[class|="colmod-link"] div.foldable-list-container {
-	display: inline;
-}
-
-[class|="colmod-link"] a {
-	overflow-wrap: anywhere;
+.unflad-user-abusive {
+	color: #844;
+	font-size: 150%;
+	border: 1px solid #000;
+	padding: 3px;
+	margin: 5px;
 }
 
 /* メタタイトル折りたたみ用CSS */
@@ -1580,18 +1529,3 @@ li.folded > .colmod-content {
 	content: "\3000";
 }
 
-/* vim: set noet: */
-
-/*
-    Fix for Wikidot error with displaying the 'Is username an abusive user' prompt,
-    when selecting the 'The User Is Abusive' option, due to a wikido typo
-    'unflad-user-abusive' is an intentional typo in this code.
-*/
-
-.unflad-user-abusive {
-	color: #844;
-	font-size: 150%;
-	border: 1px solid #000;
-	padding: 3px;
-	margin: 5px;
-}
