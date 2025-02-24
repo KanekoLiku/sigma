@@ -46,7 +46,7 @@
 	position: relative;
 	margin: 1.5rem auto 0;
 	max-width: 67.5rem;
-	min-height: 135rem;
+	min-height: 120rem;
 	height: auto;
 }
 
@@ -270,7 +270,7 @@ sup {
 	margin-left: 120px;
 	padding: 0;
 	float: left;
-	max-height: 96px;
+	max-height: 95px;
 }
 
 #header h2 {
@@ -285,7 +285,7 @@ sup {
 #header h1 a {
 	display: block;
 	margin: 0;
-	padding: 79px 0 25px;
+	padding: 80px 0 25px;
 	line-height: 0px;
 	max-height: 0;
 	color: #eee;
@@ -300,11 +300,11 @@ sup {
 /*  ヘッダータイトルのアルファベットのずれを修正 */
 #header h1 a::before {
 	content: 'SCP';
-	font-size: 1.02em;
 }
 
 #header h1 a::after {
 	content: '財団';
+	font-size: 0.98em;
 	vertical-align: middle;
 }
 
@@ -493,6 +493,20 @@ sup {
 	font-size: 0.9em;
 }
 
+/*
+
+#side-bar .menu-item img,
+#interwiki .menu-item img {
+	width: 13px;
+	height: 13px;
+	border: 0;
+	margin-right: 2px;
+	position: relative;
+	bottom: -2px;
+}
+
+*/
+
 #side-bar .menu-item img,
 #interwiki .menu-item img {
 	display: none;
@@ -564,6 +578,7 @@ sup {
 @media (max-width: 767px) {
 	#top-bar .open-menu a {
 		position: fixed;
+		top: auto;
 		bottom: 1rem;
 		left: 1rem;
 		z-index: 15;
@@ -928,10 +943,9 @@ div.page-rate-widget-box .rate-points {
 
 @media (max-width: 767px) {
 	.scp-clear-true.scp-image-block {
-		float: none;
 		clear: both;
-		margin-left: auto;
-		margin-right: auto;
+		float: none;
+		margin-inline: auto;
 	}
 }
 
@@ -1361,6 +1375,8 @@ div#u-adult-warning > .error-block {
 	border: unset;
 	margin-bottom: 1em;
 }
+
+/* vim: set noet: */
 
 /*
 	Fix for adblocker accidentally blocking file upload pane from displaying
