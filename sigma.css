@@ -1406,46 +1406,26 @@ div#u-adult-warning > .error-block {
 	margin: 5px;
 }
 
-/* メタタイトル折りたたみ用CSS */
-.content-panel.scp ul {
-	padding: 0 0 0 25px;
+/* Additional features in JP */
+
+/* printuser avaterhover非選択 */
+.printuser.avatarhover > a > img {
+	user-select: none;
 }
 
-.content-panel.scp ul li {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 1;
-	overflow: hidden;
-	padding: 0 0 0 15px;
-	cursor: pointer;
-	-webkit-touch-callout: none; /* iOS  3D touch 不具合修正 */
-}
-
-.content-panel.scp ul li:hover {
-	-webkit-line-clamp: unset;
-	overflow: visible;
-}
-
-.content-panel.scp ul li::before {
-	background: #333;
-	content: '';
-	display: inline-block;
-	height: 5px;
-	margin: 0 10px 0 -15px;
-	vertical-align: middle;
-	width: 5px;
-}
-
-@media (max-width: 767px) {
-	.content-panel.scp .content-toc {
-		float: unset;
-	}
+.forum-category-box .title a:empty::after {
+	content: '\3000';
 }
 
 /* nav:topでPageOptionsが操作できない問題の修正 */
 #page-content .top-bar,
 #page-content .mobile-top-bar {
 	position: static;
+}
+
+/* プレビュー時のクレジットモジュールの表示崩れを修正 */
+.creditRate > li {
+	display: none;
 }
 
 /* stylelint-disable selector-class-pattern */
@@ -1500,6 +1480,42 @@ div#u-adult-warning > .error-block {
 
 /* stylelint-enable */
 
+/* メタタイトル折りたたみ用CSS */
+.content-panel.scp ul {
+	padding: 0 0 0 25px;
+}
+
+.content-panel.scp ul li {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+	padding: 0 0 0 15px;
+	cursor: pointer;
+	-webkit-touch-callout: none; /* iOS  3D touch 不具合修正 */
+}
+
+.content-panel.scp ul li:hover {
+	-webkit-line-clamp: unset;
+	overflow: visible;
+}
+
+.content-panel.scp ul li::before {
+	background: #333;
+	content: '';
+	display: inline-block;
+	height: 5px;
+	margin: 0 10px 0 -15px;
+	vertical-align: middle;
+	width: 5px;
+}
+
+@media (max-width: 767px) {
+	.content-panel.scp .content-toc {
+		float: unset;
+	}
+}
+
 /* Show-Changes Highlights from SCP-CN  */
 .inline-diff ins:first-of-type::before,
 .inline-diff del:first-of-type::before,
@@ -1534,13 +1550,4 @@ div#u-adult-warning > .error-block {
 
 .del {
 	background-color: #fcc;
-}
-
-/* printuser avaterhover非選択 */
-.printuser.avatarhover > a > img {
-	user-select: none;
-}
-
-.forum-category-box .title a:empty::after {
-	content: '\3000';
 }
