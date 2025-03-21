@@ -1423,10 +1423,14 @@ div#u-adult-warning > .error-block {
 	position: static;
 }
 
+/* stylelint-disable selector-class-pattern */
+
 /* プレビュー時のクレジットモジュールの表示崩れを修正 */
 .creditRate > li {
 	display: none;
 }
+
+/* stylelint-enable */
 
 /* stylelint-disable selector-class-pattern */
 
