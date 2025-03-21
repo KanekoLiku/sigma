@@ -1426,6 +1426,13 @@ div#u-adult-warning > .error-block {
 /* stylelint-disable selector-class-pattern */
 
 /* プレビュー時のクレジットモジュールの表示崩れを修正 */
+.creditRate::before {
+	color: #000;
+	content: "プレビュー時、クレジットモジュールは非表示となっています。表示を確認するには、一度保存してください。";
+	display: list-item;
+	font-weight: bold;
+	margin: 1.5rem 0;
+}
 .creditRate > li {
 	display: none;
 }
