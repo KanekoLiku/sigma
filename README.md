@@ -20,7 +20,7 @@ Once this is configured, there are a few scripts you can take advantage of:
 
 ```
 $ npm run build         # Builds the theme and outputs to dist/
-$ npm run clean         # Deletes dist/
+$ npm run clean         # Deletes dist/ and sigma.css
 $ npm run stylelint     # Runs stylelint, reporting any code issues
 $ npm run stylelint:fix # Runs stylelint, automatically fixing issues
 $ npm run prettier      # Runs prettier, reporting any formatting issues

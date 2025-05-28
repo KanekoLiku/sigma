@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "./build.sh",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist sigma.css",
     "minify": "minify sigma.css > dist/css/sigma.min.css",
     "stylelint": "stylelint localization.css",
     "stylelint:fix": "stylelint --fix localization.css",
