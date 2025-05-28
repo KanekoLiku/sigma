@@ -1,0 +1,69 @@
+name: Sync submodule
+
+on:
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-submodule:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+            fetch-depth: 0
+
+      - name: Set up Git
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+      - name: Check for Sync PR
+        run: |
+          PR_COUNT=$(gh pr list --search "sync:" --json number | jq length)
+
+          if [ "$PR_COUNT" -gt 0 ]; then
+            echo "Sync PR already exists. Closing the process."
+            exit 0
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout new branch
+        run: |
+          BRANCH_NAME="sync/$(date +'%y%m%d-%H%M%S')"
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          git switch -c "$BRANCH_NAME" main
+
+      - name: Update submodule
+        run: |
+          git submodule update --remote --merge
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --exit-code || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git add .
+          git commit -m "Sync submodule"
+          git push origin $BRANCH_NAME
+
+      - name: Create Pull Request
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          gh pr create \
+            --title "sync: $(date +'%y%m%d-%H%M%S')" \
+            --body "This PR is a result of automatic synchronization." \
+            --base main \
+            --head $BRANCH_NAME
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
