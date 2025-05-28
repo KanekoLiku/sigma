@@ -26,6 +26,7 @@ jobs:
         run: npm ci
 
       - name: Build
+        uses: actions/checkout@v4
         run: ./build.sh
 
       - name: Upload artifact
