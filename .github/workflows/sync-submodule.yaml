@@ -22,8 +22,8 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config user.name "GitHub Action"
-          git config user.email "action@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Check for Sync PR
         id: check_pr
