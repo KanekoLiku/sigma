@@ -30,6 +30,8 @@ jobs:
         run: |
           PR_COUNT=$(gh pr list --search "Sync submodule:" --json number | jq length)
           echo "PR_COUNT=$PR_COUNT" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Exit if PR exists
         if: steps.check_pr.outputs.PR_COUNT > '0'
@@ -77,6 +79,8 @@ jobs:
         run: |
           gh pr create \
             --title "Sync submodule: $(date +'%y%m%d-%H%M%S')" \
-            --body "This PR is a result of automatic synchronization.\n**Submodule commit message:**\n${{steps.get_commit_message.outputs.SUBMODULE_COMMIT_MESSAGE}}" \
+            --body "This PR is a result of automatic synchronization.\n**Submodule commit message:**\n${{ steps.get_commit_message.outputs.SUBMODULE_COMMIT_MESSAGE }}" \
             --base main \
             --head $BRANCH_NAME
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
