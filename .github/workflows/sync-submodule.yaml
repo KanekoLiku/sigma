@@ -79,7 +79,7 @@ jobs:
         run: |
           gh pr create \
             --title "Sync submodule: $(date +'%y%m%d-%H%M%S')" \
-            --body "This PR is a result of automatic synchronization.\n**Submodule commit message:**\n${{ steps.get_commit_message.outputs.SUBMODULE_COMMIT_MESSAGE }}" \
+            --body $'This PR is a result of automatic synchronization.\n**Submodule commit message:**\n'"${{ steps.get_commit_message.outputs.SUBMODULE_COMMIT_MESSAGE }}" \
             --base main \
             --head $BRANCH_NAME
         env:
