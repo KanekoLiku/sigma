@@ -28,8 +28,8 @@
 
 #header h1 a::after {
 	content: '財団';
-	font-size: 0.98em;
-	vertical-align: middle;
+	font-size: 0.95em;
+	vertical-align: -0.07em;
 }
 
 #header h1 a span {
