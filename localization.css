@@ -1,5 +1,5 @@
 /*
-	Sigma-10 Localization for JP)
+	Sigma-10 (Localization for JP)
 	[2025 Wikidot Theme]
 	Maintained by the JP SCP Wiki Technical Team, based on:
 
@@ -28,8 +28,8 @@
 
 #header h1 a::after {
 	content: '財団';
-	font-size: 0.98em;
-	vertical-align: middle;
+	font-size: 0.95em;
+	vertical-align: -0.07em;
 }
 
 #header h1 a span {
@@ -84,13 +84,13 @@
 
 /* stylelint-disable selector-class-pattern */
 
-/* プレビュー時のクレジットモジュールの表示崩れを修正 */
+/* プレビュー時のクレジット/Infoモジュールの表示崩れを修正 */
 .creditRate::before {
-	color: #000;
-	content: 'プレビュー時、クレジットモジュールは非表示となっています。表示を確認するには、一度保存してください。';
+	content: 'プレビュー時、クレジットモジュール・Infoモジュールは非表示となっています。\A表示を確認するには、一度保存してください。';
 	display: list-item;
 	font-weight: bold;
-	margin: 1.5rem 0;
+	margin: 1.5em 0;
+	white-space: pre;
 }
 
 .creditRate > li {
